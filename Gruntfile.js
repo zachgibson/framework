@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'sass',
           src: ['*.scss'],
-          dest: '/Volumes/WWWShare/html/site/site/wp-content/themes/nwseo-site',
+          dest: '/Volumes/WWWShare/html/<%= path %>/site/wp-content/themes/nwseo-site',
           ext: '.css'
         }]
       },
