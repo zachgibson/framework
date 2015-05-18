@@ -3,6 +3,8 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    path: 'wat',
+
     // Sass to CSS
     sass: {
       app: {
@@ -25,7 +27,7 @@ module.exports = function(grunt) {
     // Parse CSS and add vendor-prefixed CSS properties using the Can I Use database
     autoprefixer: {
       no_dest: {
-        src: '/Volumes/WWWShare/html/site/site/wp-content/themes/nwseo-site/style.css'
+        src: '/Volumes/WWWShare/html/<%= path %>/site/wp-content/themes/nwseo-<%= path %>/style.css'
       }
     },
 
@@ -37,11 +39,11 @@ module.exports = function(grunt) {
         tasks: ['sass'],
       },
       css: {
-        files: ['/Volumes/WWWShare/html/site/site/wp-content/themes/nwseo-site/style.css'],
+        files: ['/Volumes/WWWShare/html/<%= path %>/site/wp-content/themes/nwseo-<%= path %>/style.css'],
         tasks: ['autoprefixer']
       },
       php: {
-        files: ['/Volumes/WWWShare/html/site/site/wp-content/themes/nwseo-site/*.php'],
+        files: ['/Volumes/WWWShare/html/<%= path %>/site/wp-content/themes/nwseo-<%= path %>/*.php'],
       }
     }
   });
